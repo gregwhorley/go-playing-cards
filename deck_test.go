@@ -11,12 +11,14 @@ func TestNewDeck(t *testing.T) {
 		t.Error("Expected 52 cards but received", len(d))
 	}
 
-	if d[0] != "Ace of Hearts" {
-		t.Error("Expected Ace of Hearts as first card but received", d[0])
+	c := d[0]
+	if c.value != "Ace" && c.suit != "Hearts" {
+		t.Error("Expected Ace of Hearts as first card but received", c.value, c.suit)
 	}
 
-	if d[len(d) -1] != "King of Clubs" {
-		t.Error("Expected King of Clubs as last card but received", d[len(d) -1])
+	c2 := d[len(d) -1]
+	if c2.value != "King" && c2.suit != "Clubs" {
+		t.Error("Expected King of Clubs as last card but received", c2.value, c2.suit)
 	}
 }
 
