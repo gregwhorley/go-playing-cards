@@ -3,11 +3,13 @@ Just messing around with a deck of cards
 
 ## Build
 ```bash
-go build main.go deck.go
+$ go build main.go deck.go
 ```
 
 ## Test
-Coming soon
+```bash
+$ go test -v
+```
 
 ## Use cases
 * Create a new deck of cards with `newDeck()`: `cards := newDeck()`
